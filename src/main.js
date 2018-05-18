@@ -9,9 +9,11 @@ new Vue({
     title: 'Contas a Pagar',
 
     menus: [
-        {id: 0, name: 'Contas a Pagar'},
+        {id: 0, name: 'Listar Contas'},
         {id: 1, name: 'Criar Contas'}
     ],
+
+    activedView: 0,
 
     bills: [
         {date_due: '20/08/2018', name: 'Conta de Luz', value: 70.99, done: 1},
@@ -41,8 +43,8 @@ new Vue({
 
   methods: {
 
-    showView: function (number) {
-        console.log(number);
+    showView: function (id) {
+        this.activedView = id;
     }
 
   }

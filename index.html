@@ -35,8 +35,8 @@
             <td>{{ index +1 }}</td>
             <td>{{ o.date_due }}</td>
             <td>{{ o.name }}</td>
-            <td>{{ o.value }}</td>
-            <td>{{ o.done }}</td>
+            <td>R$ {{ o.value }}</td>
+            <td>{{ o.done | doneLabel }}</td>
             <td>
               <a href="#" @click.prevent="loadBill(o)">Edit</a>
             </td>

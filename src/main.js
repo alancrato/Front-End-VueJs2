@@ -100,4 +100,14 @@ new Vue({
       }
   },
 
+  filters: {
+     doneLabel: function (value) {
+         if(value == 0){
+            return "Não Paga";
+         }else{
+             return "Paga";
+         }
+     }
+  }
+
 });

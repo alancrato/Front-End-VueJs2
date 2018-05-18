@@ -13,7 +13,7 @@
       <nav>
         <ul>
           <li v-for="o in menus">
-            <a href="javascript:void(0)" v-on:click="showView(o.id)">{{ o.name }}</a>
+            <a href="javascript:void(0)" @click="showView(o.id)">{{ o.name }}</a>
           </li>
         </ul>
       </nav>
@@ -43,7 +43,8 @@
 
       <div v-if="activedView == 1">
         <form>
-          Text:<input type="text">
+          <input v-model="message" placeholder="Me edite">
+          <p>A mensagem é: {{ message }}</p>
         </form>
       </div>
 

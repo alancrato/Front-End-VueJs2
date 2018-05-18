@@ -20,7 +20,8 @@ new Vue({
     bill: {
       date_due: '',
       name: '',
-      value: 0
+      value: 0,
+      done: 0
     },
 
     names: [

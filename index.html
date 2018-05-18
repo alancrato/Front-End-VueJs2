@@ -42,9 +42,21 @@
       </div>
 
       <div v-if="activedView == 1">
-        <form>
-          <input v-model="message" placeholder="Me edite">
-          <p>A mensagem é: {{ message }}</p>
+        <form name="form">
+          <label>Vencimento:</label>
+          <input type="text" v-model="bill.date_due"/>
+          <br/><br/>
+          <label>Nome:</label>
+          <select v-model="bill.name">
+            <option v-for="o in names">
+              {{ o }}
+            </option>
+          </select>
+          <br/><br/>
+          <label>Valor:</label>
+          <input type="text" v-model="bill.value"/>
+          <br/><br/>
+          <input type="button" @click="submit" value="Enviar">
         </form>
       </div>
 

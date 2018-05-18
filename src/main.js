@@ -17,6 +17,22 @@ new Vue({
 
     activedView: 1,
 
+    bill: {
+      date_due: '',
+      name: '',
+      value: 0
+    },
+
+    names: [
+        'Conta de Luz',
+        'Conta de água',
+        'Conta de Telefone',
+        'Supermercado',
+        'Cartão de Créditos',
+        'Empréstimos',
+        'Gasolina'
+    ],
+
     bills: [
         {date_due: '20/08/2018', name: 'Conta de Luz', value: 70.99, done: 1},
         {date_due: '21/08/2018', name: 'Conta de água', value: 50.99, done: 0},
@@ -47,7 +63,12 @@ new Vue({
 
     showView: function (id) {
         this.activedView = id;
-    }
+    },
+      
+   submit: function () {
+       this.bills.push(this.bill);
+       this.activedView = 0;
+   }
 
   },
 
